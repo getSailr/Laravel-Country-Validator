@@ -267,10 +267,6 @@ class CountryValidator extends Illuminate\Validation\Validator
             'Zimbabwe'
         );
 
-        if (in_array($value, $countries)) {
-            return true;
-        }
-
-        return false;
+        return in_array($value, $countries);
     }
 }
